@@ -1,0 +1,240 @@
+{
+  "HTML": [
+    {
+      "question": "What is HTML",
+      "options": {
+        "A": "A programming language",
+        "B": "A stylesheet language",
+        "C": "A markup language",
+        "D": "A database management system"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "What is the &lt;h1> tag used for",
+      "options": {
+        "A": "To create a paragraph",
+        "B": "To add an image",
+        "C": "As the largest heading tag",
+        "D": "To create a list"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "How do you create a hyperlink in HTML",
+      "options": {
+        "A": "&lt;link>",
+        "B": "&lt;href>",
+        "C": "&lt;a>",
+        "D": "&lt;url>"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "How do you add an image in HTML",
+      "options": {
+        "A": "&lt;img src=\"image.jpg\">",
+        "B": "&lt;image src=\"image.jpg\">",
+        "C": "&lt;picture src=\"image.jpg\">",
+        "D": "&lt;src img=\"image.jpg\">"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "How do you create a list in HTML",
+      "options": {
+        "A": "Using &lt;ul> or &lt;ol> tags",
+        "B": "Using the &lt;list> tag",
+        "C": "Using the &lt;li> tag",
+        "D": "Using the &lt;item> tag"
+      },
+      "answer": "A"
+    }
+  ],
+  "CSS": [
+    {
+      "question": "What does CSS stand for",
+      "options": {
+        "A": "Creative Style Sheets",
+        "B": "Cascading Style Sheets",
+        "C": "Colorful Style Sheets",
+        "D": "Computer Style Sheets"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Which property is used to change the background color",
+      "options": {
+        "A": "color",
+        "B": "background-color",
+        "C": "bgcolor",
+        "D": "bcolor"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Which property is used to change the font of an element",
+      "options": {
+        "A": "font-style",
+        "B": "font-weight",
+        "C": "font-family",
+        "D": "font-variant"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "How do you select an element with id 'demo'",
+      "options": {
+        "A": "#demo",
+        "B": ".demo",
+        "C": "demo",
+        "D": "*demo"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Which property is used to change the text color of an element",
+      "options": {
+        "A": "fgcolor",
+        "B": "text-color",
+        "C": "color",
+        "D": "font-color"
+      },
+      "answer": "C"
+    }
+  ],
+  "JavaScript": [
+    {
+      "question": "What is JavaScript primarily used for",
+      "options": {
+        "A": "To create static websites",
+        "B": "To create interactive web pages",
+        "C": "To manage databases",
+        "D": "To design web pages"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Which company developed JavaScript",
+      "options": {
+        "A": "Netscape",
+        "B": "Google",
+        "C": "Microsoft",
+        "D": "Apple"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Which symbol is used for comments in JavaScript",
+      "options": {
+        "A": "//",
+        "B": "/* */",
+        "C": "&lt;!-- -->",
+        "D": "#"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "How do you declare a variable in JavaScript",
+      "options": {
+        "A": "variable myVar",
+        "B": "v myVar",
+        "C": "var myVar",
+        "D": "myVar"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "Which method is used to write HTML output using JavaScript",
+      "options": {
+        "A": "document.write()",
+        "B": "document.print()",
+        "C": "console.log()",
+        "D": "window.print()"
+      },
+      "answer": "A"
+    }
+  ],
+  "GIT": [
+    {
+      "question": "What is Git",
+      "options": {
+        "A": "A project management tool",
+        "B": "A version control system",
+        "C": "A programming language",
+        "D": "A database"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "How do you initialize a new Git repository",
+      "options": {
+        "A": "git start",
+        "B": "git init",
+        "C": "git create",
+        "D": "git new"
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Which command is used to stage changes for commit",
+      "options": {
+        "A": "git commit",
+        "B": "git stage",
+        "C": "git add",
+        "D": "git push"
+      },
+      "answer": "C"
+    },
+    {
+      "question": "How do you check the status of your Git repository",
+      "options": {
+        "A": "git status",
+        "B": "git check",
+        "C": "git info",
+        "D": "git log"
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Which command is used to download a repository from GitHub to your local machine",
+      "options": {
+        "A": "git push",
+        "B": "git pull",
+        "C": "git clone",
+        "D": "git fork"
+      },
+      "answer": "C"
+    }
+  ],
+  "correctAnswers": {
+    "HTML": [
+      "C",
+      "C",
+      "C",
+      "A",
+      "A"
+    ],
+    "CSS": [
+      "B",
+      "B",
+      "C",
+      "A",
+      "C"
+    ],
+    "JavaScript": [
+      "B",
+      "A",
+      "A",
+      "C",
+      "A"
+    ],
+    "Git": [
+      "B",
+      "B",
+      "C",
+      "A",
+      "C"
+    ]
+  }
+}
