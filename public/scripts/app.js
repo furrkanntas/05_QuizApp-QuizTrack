@@ -17,11 +17,12 @@ async function fetchQuizData() {
         const response = await fetch('/public/questions.json');
         quizData = await response.json();
         const qTopics = Object.keys(quizData);
-        qTopics.forEach((topic) => {
 
-            const answersArray2 = quizData[topic].map( quiz => quiz.answer );
+        qTopics.forEach((topic) => {
+            const answersArray2 = quizData[topic].map(quiz => quiz.answer);
             correctAnswers[topic] = answersArray2;
         })
+
     } catch (error) {
         console.error('Error fetching the JSON file:', error);
     }
@@ -60,6 +61,7 @@ quizRoom.addEventListener('click', e => {
         }
     }
     resultDiv.classList.add('hidden');
+    confirmButton.classList.remove('hidden');
 });
 
 async function loadQuestions(buttonId) {
@@ -80,7 +82,7 @@ document.addEventListener('click', e => {
         previousSelections.forEach(option => option.classList.remove('selectedAnswerBG'));
 
         clickedOption.classList.add('selectedAnswerBG');
-        
+
         const questionIndex = questionDiv.getAttribute('data-question-index');
         selectedAnswers[questionIndex] = clickedOption.getAttribute('data-option-key');
     }
@@ -88,17 +90,17 @@ document.addEventListener('click', e => {
 
 confirmButton.addEventListener('click', () => {
     let score = 0;
-    
+
     document.querySelectorAll('.list-group-item').forEach(questionDiv => {
         const questionIndex = questionDiv.getAttribute('data-question-index');
         const userAnswer = selectedAnswers[questionIndex];
         const correctAnswer = correctAnswers[textTopicDiv.textContent][questionIndex];
-        
+
         const correctOption = questionDiv.querySelector(`[data-option-key="${correctAnswer}"]`);
         if (correctOption) {
             correctOption.classList.add('correctAnswerBG');
         }
-        
+
         const selectedOption = questionDiv.querySelector('.selectedAnswerBG');
         if (selectedOption) {
             if (userAnswer === correctAnswer) {
@@ -114,6 +116,14 @@ confirmButton.addEventListener('click', () => {
     animateScore(score);
 
     resultDiv.classList.remove('hidden');
+    confirmButton.classList.add('hidden');
+});
+
+retryButton.addEventListener('click', () => {
+    const currentTopic = textTopicDiv.textContent;
+    loadQuestions(currentTopic);
+    resultDiv.classList.add('hidden');
+    confirmButton.classList.remove('hidden');
 });
 
 function animateScore(score) {
@@ -125,7 +135,7 @@ function animateScore(score) {
         } else {
             currentScore += 1;
         }
-    }, 10); // Puanın arttırılma hızı (ms cinsinden)
+    }, 10);
 }
 
 window.addEventListener('DOMContentLoaded', setDefaultTopic);
