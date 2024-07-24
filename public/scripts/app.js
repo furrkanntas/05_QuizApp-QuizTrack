@@ -8,25 +8,30 @@ const retryButton = document.querySelector(".retry");
 const resultDiv = document.querySelector('.result');
 const resultSpan = resultDiv.querySelector('span');
 
-let quizData = {}; 
-let selectedAnswers = {};
-let correctAnswers = {};
+let quizData = {};
+const selectedAnswers = {};
+const correctAnswers = {};
 
 async function fetchQuizData() {
     try {
         const response = await fetch('/public/questions.json');
         quizData = await response.json();
-        correctAnswers = quizData.correctAnswers;
+        const qTopics = Object.keys(quizData);
+        qTopics.forEach((topic) => {
+
+            const answersArray2 = quizData[topic].map( quiz => quiz.answer );
+            correctAnswers[topic] = answersArray2;
+        })
     } catch (error) {
         console.error('Error fetching the JSON file:', error);
     }
 }
 
 async function setDefaultTopic() {
-    await fetchQuizData(); 
+    await fetchQuizData();
     const defaultButton = document.querySelector('#HTML');
     if (defaultButton) {
-        defaultButton.click(); 
+        defaultButton.click();
     }
 }
 
@@ -59,7 +64,7 @@ quizRoom.addEventListener('click', e => {
 
 async function loadQuestions(buttonId) {
     const questions = quizData[buttonId];
-    quizQuestions.innerHTML = ''; 
+    quizQuestions.innerHTML = '';
     questions.forEach((questionData, index) => {
         const question = new Question(index, questionData);
         quizQuestions.appendChild(question.createQuestionElement());
@@ -70,10 +75,10 @@ document.addEventListener('click', e => {
     if (e.target.closest('.option')) {
         const clickedOption = e.target.closest('.option');
         const questionDiv = clickedOption.closest('.list-group-item');
-        
+
         const previousSelections = questionDiv.querySelectorAll('.selectedAnswerBG');
         previousSelections.forEach(option => option.classList.remove('selectedAnswerBG'));
-        
+
         clickedOption.classList.add('selectedAnswerBG');
         
         const questionIndex = questionDiv.getAttribute('data-question-index');
@@ -104,7 +109,7 @@ confirmButton.addEventListener('click', () => {
         }
     });
 
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
 
     animateScore(score);
 
