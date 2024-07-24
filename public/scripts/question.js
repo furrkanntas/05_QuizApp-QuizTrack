@@ -7,7 +7,8 @@ export class Question {
 
   createQuestionElement() {
       const questionDiv = document.createElement('div');
-      questionDiv.classList.add('list-group-item', 'flex', 'items-start', 'gap-2', 'bg-white/30', 'mt-3', 'rounded-xl', 'border-l-4', 'border-orange-300', 'hover:border-blue-300', 'shadow-md');
+      questionDiv.classList.add('list-group-item', 'flex', 'items-start', 'gap-2', 'bg-white/30', 'mt-4', 'rounded-xl', 'border-l-4', 'border-orange-300', 'hover:border-blue-300', 'shadow-md');
+      questionDiv.setAttribute('data-question-index', this.index);
       questionDiv.innerHTML = `
       <div class="flex flex-col p-3 pr-6">
         <div class="flex items-center gap-2">
@@ -33,7 +34,7 @@ export class Question {
 
   createOptionElement(optionKey, optionText) {
       return `
-      <div class="flex items-center border-[1px] border-green-700 hover:bg-yellow-200 cursor-pointer py-2 px-3 rounded-full gap-2">
+      <div class="option flex items-center border-[1px] border-green-700 hover:bg-yellow-200 cursor-pointer py-2 px-3 rounded-full gap-2" data-option-key="${optionKey}">
         <i class="fa-solid fa-key text-purple-500"></i>
         <div class="${optionKey}">${optionText}</div>
       </div>

@@ -39,3 +39,11 @@
   .selectedAnswerBG {
     @apply bg-yellow-400;
   }
+
+  .correctAnswerBG {
+    @apply bg-green-400;
+  }
+
+  .wrongAnswerBG {
+    @apply bg-red-400;
+  }

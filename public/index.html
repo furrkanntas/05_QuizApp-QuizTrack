@@ -10,7 +10,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="stylesheet" href="/public/styles.css">
+  <link rel="stylesheet" href="./styles.css">
   <title>FT | Quiz</title>
 </head>
 
@@ -19,39 +19,42 @@
   <main class="w-full h-screen mx-auto">
     <div class="tmy-4 text-center text-4xl font-bold mt-20">Quiz-Track</div>
     <section class="max-w-[80%] h-full mx-auto mt-4">
-
-      <div class="quiz-rooms flex flex-col justify-center items-center">
-        <div class="my-2 font-semibold text-xl">Choose a quiz topic:</div>
-        <div class="flex justify-center items-center mt-4 gap-4">
-          <button class="btnGreen" id="HTML">HTML</button>
-          <button class="btnBlue" id="CSS">CSS</button>
-          <button class="btnOrange" id="JavaScript">JavaScript</button>
-          <button class="btnPurple" id="GIT">GIT</button>
+      <div class="flex flex-col justify-center items-center w-full">
+        <div class="quiz-rooms flex flex-col justify-center items-center w-full">
+          <div class="my-2 font-semibold text-xl">Choose a quiz topic:</div>
+          <div class="flex justify-center items-center mt-4 gap-4">
+            <button class="btnGreen" id="HTML">HTML</button>
+            <button class="btnBlue" id="CSS">CSS</button>
+            <button class="btnOrange" id="JavaScript">JavaScript</button>
+            <button class="btnPurple" id="GIT">GIT</button>
+          </div>
+          <div class="bg-yellow-500 w-[95%] h-[2px] mt-3"></div>
         </div>
-        <div class="bg-yellow-500 w-[95%] h-[2px] mt-3"></div>
-      </div>
-      <div
-        class="mx-auto textTopic flex justify-center bg-white/30 p-2 rounded-full border-b-4 border-green-300 shadow-md font-semibold text-xl mt-3">
+        <div
+          class="mx-auto textTopic flex justify-center bg-white/30 p-2 rounded-full border-b-4 border-green-300 shadow-md font-semibold text-xl mt-3 w-full">
         </div>
 
-      <!-- result section -->
-      <div class="result mt-4">
-        <div class="flex justify-center items-center">
-          <i class="fa-solid fa-circle-check text-green-600 text-2xl pr-2"></i>
-          <p class="text-xl font-semibold">You are<span class="text-4xl px-3 font-bold text-orange-700">0%</span>success
-          </p>
+        <!-- result section -->
+        <div class="result hidden mt-8">
+          <div class="flex justify-center items-center">
+            <i class="fa-solid fa-circle-check text-green-600 text-2xl pr-2"></i>
+            <p class="text-xl font-semibold">You are<span
+                class="text-4xl px-3 font-bold text-orange-700">0%</span>success
+            </p>
+            <button class="retry text-center text-xl ml-6 font-bold mx-auto bg-white/30 hover:bg-blue-200 py-2 px-4 border-[1px] border-green-700 shadow-lg rounded-full focus:bg-blue-400 focus:scale-110 focus:border-none focus:rotate-6 transition duration-100 focus:shadow-xl focus:ring-2 focus:ring-yellow-600">Retry</button>
+          </div>
         </div>
-      </div>
+        <!-- quiz section -->
+        <div class="quiz py-4 bg-primary w-full">
 
-      <!-- quiz section -->
-      <div class="quiz py-4 bg-primary">
-        
+        </div>
+        <button class="confirm text-center mt-5 mb-52 text-xl font-bold mx-auto bg-white/30 hover:bg-blue-200 py-3 px-6 border-[1px] border-green-700 shadow-lg rounded-full focus:bg-blue-400 focus:scale-110 focus:border-none focus:rotate-6 transition duration-100 focus:shadow-xl focus:ring-2 focus:ring-yellow-600">Complete</button>
       </div>
     </section>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/date-fns@3.6.0/cdn.min.js"></script>
-  <script type="module" src="/public/scripts/app.js"></script>
+  <script type="module" src="./scripts/app.js"></script>
 </body>
 
 </html>
