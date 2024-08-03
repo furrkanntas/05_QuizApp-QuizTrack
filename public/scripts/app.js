@@ -14,7 +14,7 @@ const correctAnswers = {};
 
 async function fetchQuizData() {
     try {
-        const response = await fetch('/public/questions.json');
+        const response = await fetch('./questions.json');
         quizData = await response.json();
         const qTopics = Object.keys(quizData);
 
