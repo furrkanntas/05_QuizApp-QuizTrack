@@ -1,5 +1,9 @@
 # Quiz Track Application
 
+🟩 **Live Demo:** <a href="https://furrkanntas.github.io/05_QuizApp-QuizTrack/" target="_blank" rel="noopener noreferrer">Quiz Track - Live Link</a>
+
+🟨 **Other Projects:** <a href="https://furrkanntas.github.io/01_FT-Portfolio/index.html" target="_blank" rel="noopener noreferrer">Explore My Projects</a>
+
 Welcome to the Quiz Track Application! This is a simple quiz application built with HTML, CSS, and JavaScript that lets users test their knowledge on various topics. The application fetches quiz questions from a JSON file and provides an interactive interface to select answers and view results.
 
 ![Demo](public/img/quiztrack.gif)
@@ -77,4 +81,8 @@ Thank you for checking out the Quiz Track Application! We hope this tool helps y
 Happy quizzing!
 
 Best regards,  
-Furkan Taş
+**Furkan Taş**
+
+🟩 **Live Demo:** <a href="https://furrkanntas.github.io/05_QuizApp-QuizTrack/" target="_blank" rel="noopener noreferrer">Quiz Track - Live Link</a>
+
+🟨 **Other Projects:** <a href="https://furrkanntas.github.io/01_FT-Portfolio/index.html" target="_blank" rel="noopener noreferrer">Explore My Projects</a>
