@@ -574,6 +574,10 @@ video {
   margin-bottom: 13rem;
 }
 
+.ml-6{
+  margin-left: 1.5rem;
+}
+
 .mt-20{
   margin-top: 5rem;
 }
@@ -592,10 +596,6 @@ video {
 
 .mt-8{
   margin-top: 2rem;
-}
-
-.ml-6{
-  margin-left: 1.5rem;
 }
 
 .flex{
@@ -725,6 +725,11 @@ video {
   padding-right: 0.75rem;
 }
 
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .px-6{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -743,11 +748,6 @@ video {
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.px-4{
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .pr-2{
